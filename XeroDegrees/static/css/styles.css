@@ -1,0 +1,235 @@
+body {
+  background-color: #100e17;
+  background-image: url("https://10619-2.s.cdn12.com/rests/original/101_509785158.jpg");
+  font-family: 'Open Sans', sans-serif;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-repeat:none;
+  margin:0px;
+  padding: 0px;
+}
+
+.container {
+  position: absolute;
+  height: 300px;
+  width: 1200px;
+  top: 800px;
+  left: calc(50% - 300px);
+  display: flex;
+}
+
+.container-test {
+position: absolute;
+top: 0;
+width: 1200px;
+}
+
+.card {
+  display: flex;
+  height: 280px;
+  width: 200px;
+  background-color: #17141d;
+  border-radius: 10px;
+  box-shadow: -1rem 0 3rem #000;
+/*   margin-left: -50px; */
+  transition: 0.4s ease-out;
+  position: relative;
+  left: 0px;
+}
+
+.card:not(:first-child) {
+    margin-left: -50px;
+}
+
+.card:hover {
+  transform: translateY(-20px);
+  transition: 0.4s ease-out;
+}
+
+.card:hover ~ .card {
+  position: relative;
+  left: 50px;
+  transition: 0.4s ease-out;
+}
+
+.title {
+  color: white;
+  font-weight: 300;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.bar {
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  height: 5px;
+  width: 150px;
+}
+
+.emptybar {
+  background-color: #2e3033;
+  width: 100%;
+  height: 100%;
+}
+
+.filledbar {
+  position: absolute;
+  top: 0px;
+  z-index: 3;
+  width: 0px;
+  height: 100%;
+  background: rgb(0,154,217);
+  background: linear-gradient(90deg, rgba(0,154,217,1) 0%, rgba(217,147,0,1) 65%, rgba(255,186,0,1) 100%);
+  transition: 0.6s ease-out;
+}
+
+.card:hover .filledbar {
+  width: 120px;
+  transition: 0.4s ease-out;
+}
+
+.circle {
+  position: absolute;
+  top: 150px;
+  left: calc(50% - 60px);
+}
+
+.stroke {
+  stroke: white;
+  stroke-dasharray: 360;
+  stroke-dashoffset: 360;
+  transition: 0.6s ease-out;
+}
+
+svg {
+  fill: #17141d;
+  stroke-width: 2px;
+}
+
+.card:hover .stroke {
+  stroke-dashoffset: 100;
+  transition: 0.6s ease-out;
+}
+
+/*navbar styling*/
+        nav
+        {
+            float: none;
+            clear:both;
+            width:100%;
+            margin:5% auto;
+
+        }
+        nav ul
+        {
+            list-style:none;
+            margin:0px;
+            pading:0px;
+        }
+        nav li
+        {
+            float: none;
+            width:100%;
+
+        }
+        nav li a
+        {
+            display: block;
+            width: :100%;
+            padding:20px;
+            border-left:5px solid;
+            position:relative;
+            z-index: 2;/*for showing the lower layer*/
+            text-decoration: none;
+            color: #3CDFFF;
+            font-size: 20px;
+            font-weight:bolder;
+            box-sizing: border-box;
+
+        }
+        nav li a:hover
+        {
+            border-bottom: 0px;
+            color:white;
+            text-decoration:none;
+
+        }
+        nav li:first-child a
+        {
+            border-left: 10px solid #3498db;
+
+        }
+        nav li:nth-child(2) a
+        {
+            border-left: 10px solid #ffd071;
+
+        }
+        nav li:nth-child(3) a
+        {
+            border-left: 10px solid #f0776c;
+
+        }
+
+         nav li:nth-child(4) a
+        {
+            border-left: 10px solid #d8e84a;
+
+        }
+        nav li:last-child a
+        {
+            border-left: 10px solid #1abc9c;
+
+        }
+        nav li a:after
+        {
+            content:"";
+            height:100%;
+            left:0px;
+            top:0px;
+            width:0px;
+            position: absolute;
+            transition: all .3s ease 0s;
+            z-index: -1;
+        }
+         nav li a:hover:after
+        {
+            width:100%;
+
+
+        }
+        nav li:first-child a:hover
+        {
+            background-color: #3498db;
+
+        }
+         nav li:nth-child(2) a:after
+        {
+            background-color:#ffd071;
+        }
+        nav li:nth-child(3) a:after
+        {
+            background-color:#f0776c;
+        }
+        nav li:nth-child(4) a:after
+        {
+            background-color:#d8e84a;
+        }
+        nav li:last-child a:after
+        {
+            background-color:#1abc9c;
+        }
+.overlay
+{
+  position:absolute;
+  min-height:100%;
+  min-width:100%;
+  left:0;
+  top:0;
+  opacity: 1.5;
+  color: black;
+  margin:20px;
+  padding:20px;
+}

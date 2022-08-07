@@ -1,0 +1,124 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="wrapper1">
+    {% for row1 in category_row1 %}
+    <div class="card">
+        <img src="{{ row1.cat_image.url }}">
+        <div class="descriptions">
+            <h1>{{ row1.category_name }}</h1>
+            <p>
+                {{ row1.description }}
+            </p>
+            <button>
+                <i class="fab fa-youtube"></i>
+                Play trailer on YouTube
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="wrapper1" style="top: 750px;">
+    {% for row1 in category_row2 %}
+    <div class="card">
+        <img src="{{ row1.cat_image.url }}">
+        <div class="descriptions">
+            <h1>{{ row1.category_name }}</h1>
+            <p>
+                {{ row1.description }}
+            </p>
+            <button>
+                <i class="fab fa-youtube"></i>
+                Play trailer on YouTube
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="wrapper1" style="top: 1150px;">
+    {% for row1 in category_row3 %}
+    <div class="card">
+        <img src="{{ row1.cat_image.url }}">
+        <div class="descriptions">
+            <h1>{{ row1.category_name }}</h1>
+            <p>
+                {{ row1.description }}
+            </p>
+            <button>
+                <i class="fab fa-youtube"></i>
+                Play trailer on YouTube
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="wrapper1" style="top: 1550px;">
+    {% for row1 in category_row4 %}
+    <div class="card">
+        <img src="{{ row1.cat_image.url }}">
+        <div class="descriptions">
+            <h1>{{ row1.category_name }}</h1>
+            <p>
+                {{ row1.description }}
+            </p>
+            <button>
+                <i class="fab fa-youtube"></i>
+                Play trailer on YouTube
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="wrapper1" style="top: 1950px;">
+    {% for row1 in category_row5 %}
+    <div class="card">
+        <img src="{{ row1.cat_image.url }}">
+        <div class="descriptions">
+            <h1>{{ row1.category_name }}</h1>
+            <p>
+                {{ row1.description }}
+            </p>
+            <button>
+                <i class="fab fa-youtube"></i>
+                Play trailer on YouTube
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="wrapper1" style="top: 2350px;">
+    {% for row1 in category_row6 %}
+    <div class="card">
+        <img src="{{ row1.cat_image.url }}">
+        <div class="descriptions">
+            <h1>{{ row1.category_name }}</h1>
+            <p>
+                {{ row1.description }}
+            </p>
+            <button>
+                <i class="fab fa-youtube"></i>
+                Play trailer on YouTube
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<div class="wrapper1" style="top: 2750px;">
+    {% for row1 in category_row7 %}
+    <div class="card">
+        <img src="{{ row1.cat_image.url }}">
+        <div class="descriptions">
+            <h1>{{ row1.category_name }}</h1>
+            <p>
+                {{ row1.description }}
+            </p>
+            <button>
+                <i class="fab fa-youtube"></i>
+                Play trailer on YouTube
+            </button>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
