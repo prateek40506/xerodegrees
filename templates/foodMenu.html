@@ -81,7 +81,7 @@ $(document).ready(function() {
                                     </li>
                                     {% for category in links %}
                                     <li><a href="{% url 'items_by_category' category.slug %}"
-                                           style="text-decoration: none;">{{ category.category_name }} </a>
+                                           style="text-decoration: none;{% if category.slug in request.path %}color: blue;{% endif %}">{{ category.category_name }} </a>
                                     </li>
                                     {% endfor %}
                                 </ul>

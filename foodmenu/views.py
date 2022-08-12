@@ -25,7 +25,8 @@ def menu(request, category_slug=None):
                         query_items.append(item)
                         break
             else:
-                query_items.append(item)
+                if min_price <= item.price <= max_price:
+                    query_items.append(item)
         paginator = Paginator(query_items, 9)
         page = request.GET.get('page')
         paged_items = paginator.get_page(page)
@@ -56,20 +57,27 @@ def menu(request, category_slug=None):
 def item_details(request, category_slug, item_slug):
     try:
         single_item = MenuItem.objects.get(category__slug=category_slug, slug=item_slug)
+        addon = None
         addon_description = None
         if category_slug == "hot-coffee":
             addon_description = "ADD ON FLAVOURS"
+            addon = "Flavours"
         elif category_slug == "single-serve-pizzas":
             addon_description = "MAKE IT CHEESY @29/-"
+            addon = "Cheesy"
         elif category_slug == "pizza-in-a-jar":
             addon_description = "MAKE IT PERI PERI @39/-"
+            addon = "Peri Peri"
         elif category_slug == "special-pizzas":
             addon_description = "MAKE IT CHEESY!!"
+            addon = "Cheesy"
         elif category_slug == "chicken-strips" or category_slug == "chicken-wings":
             addon_description = "ADD SAUCES!!"
+            addon = "Sauces"
         context = {
             "single_item": single_item,
-            "addon_description": addon_description
+            "addon_description": addon_description,
+            "addon": addon
         }
     except Exception as e:
         raise e

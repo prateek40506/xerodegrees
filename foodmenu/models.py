@@ -51,7 +51,7 @@ class AddOns(models.Model):
         verbose_name_plural = 'add ons'
 
     def __str__(self):
-        return self.menu_item.item_name
+        return self.add_ons
 
 
 class Size(models.Model):

@@ -23,5 +23,21 @@ class CartItem(models.Model):
     quantity = models.IntegerField()
     is_active = models.BooleanField(default=True)
 
+    def price(self):
+        if self.size:
+            if self.addon:
+                return self.size.price + self.addon.price
+            else:
+                return self.size.price
+        else:
+            if self.addon:
+                return self.menu_item.price + self.addon.price
+            else:
+                return self.menu_item.price
+
+    def total_price(self):
+        item_price = self.price()
+        return self.quantity * item_price
+
     def __unicode__(self):
         return self.menu_item
