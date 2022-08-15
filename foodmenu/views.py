@@ -71,7 +71,7 @@ def item_details(request, category_slug, item_slug):
         elif category_slug == "special-pizzas":
             addon_description = "MAKE IT CHEESY!!"
             addon = "Cheesy"
-        elif category_slug == "chicken-strips" or category_slug == "chicken-wings":
+        elif category_slug in ("chicken-strips", "chicken-wings"):
             addon_description = "ADD SAUCES!!"
             addon = "Sauces"
         context = {
