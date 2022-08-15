@@ -22,7 +22,7 @@ class MenuItem(models.Model):
     is_available = models.BooleanField(default=True)
 
     def is_size(self):
-        if self.price == 0 or self.price == 1:
+        if self.price in (0, 1):
             return True
         else:
             return False
